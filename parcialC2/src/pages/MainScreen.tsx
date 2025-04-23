@@ -16,6 +16,7 @@ import {
   IonCardContent,
 } from "@ionic/react";
 import { ProductList } from "../components/ProductList";
+import { PaymentMethods } from "../components/PaymentMethods";
 import { InvoiceForm } from "../components/InvoiceForm";
 import { crearFactura } from "../services/api";
 
@@ -103,6 +104,7 @@ export const MainPage = () => {
         </IonCard>
 
         <ProductList onAdd={addToCart} />
+        <PaymentMethods onChange={setPayment} />
         <InvoiceForm onSubmit={handleInvoiceSubmit} />
 
         <IonToast
